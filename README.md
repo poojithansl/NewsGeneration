@@ -1,15 +1,7 @@
 # NewsGeneration
-- 
-Todos
-  
-  Collect NewsArticles from various sources
-    
-      Beautiful soup
 
-  Cluster the News Articles
-  
-  
-      Canopy KMeans and LDA
-
+-   Collection of news articles from various sources.
+-  Clustering of news articles.
+-  LanguageModeling using rnns.
   
   
