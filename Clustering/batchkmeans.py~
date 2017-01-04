@@ -58,7 +58,11 @@ print("done in %0.3fs" % (time() - t0))
 if True:
     print("Top terms per cluster:")
 
-    order_centroids = km.cluster_centers_.argsort()[:, ::-1]
+    if opts.n_components:
+        original_space_centroids = svd.inverse_transform(km.cluster_centers_)
+        order_centroids = original_space_centroids.argsort()[:, ::-1]
+    else:
+        order_centroids = km.cluster_centers_.argsort()[:, ::-1]
 
     terms = vectorizer.get_feature_names()
     for i in range(true_k):
