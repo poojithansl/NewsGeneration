@@ -6,7 +6,7 @@ import os
 import pickle
 
 class InputText():
-    def __init__(self,)
+    def __init__(self,batch_size,seq_length):
         input_file="input.txt"
         vocab_file="vocab.pkl"
         tensor_file="tensor.npy"
